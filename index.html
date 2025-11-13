@@ -3,36 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mis Proyectos</title>
+  <title>ElPelusa47 | Mis Proyectos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    header {
       text-align: center;
-      background-color: #f4f4f4;
+      margin-bottom: 50px;
+      animation: fadeIn 1s ease;
     }
-    h1 { color: #333; }
-    a {
-      display: block;
-      margin: 10px;
-      padding: 10px;
-      background: white;
-      border-radius: 8px;
+
+    header h1 {
+      font-size: 2.5em;
+      font-weight: 600;
+      color: #00d4ff;
+      text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+    }
+
+    header p {
+      font-size: 1.1em;
+      color: #ccc;
+      margin-top: 10px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.15);
+      border-color: #00d4ff;
+      box-shadow: 0 10px 25px rgba(0, 212, 255, 0.2);
+    }
+
+    .card h2 {
+      color: #00d4ff;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #ddd;
+      font-size: 0.95em;
+      margin-bottom: 20px;
+    }
+
+    .card a {
       text-decoration: none;
-      color: #007acc;
-      transition: 0.2s;
-      width: 250px;
-      margin-left: auto;
-      margin-right: auto;
+      color: #fff;
+      background: #00d4ff;
+      padding: 10px 20px;
+      border-radius: 25px;
+      transition: 0.3s;
     }
-    a:hover {
-      background: #007acc;
-      color: white;
+
+    .card a:hover {
+      background: #00a3cc;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #aaa;
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <h1>Mis Proyectos</h1>
-  <a href="https://elpelusa47.github.io/qrgenerator/" target="_blank">Generador de QR</a>
-  <a href="https://elpelusa47.github.io/qrcode/" target="_blank">Fork del generador</a>
+
+  <header>
+    <h1>💻 Mis Proyectos</h1>
+    <p>Bienvenido a mi página de proyectos. Aquí encontrarás todo lo que voy creando 🚀</p>
+  </header>
+
+  <section class="projects">
+    <div class="card">
+      <h2>Generador de QR</h2>
+      <p>Aplicación web que genera códigos QR a partir de cualquier URL o texto.</p>
+      <a href="https://elpelusa47.github.io/qrgenerator/" target="_blank">Ver proyecto</a>
+    </div>
+
+    <div class="card">
+      <h2>Otro Proyecto</h2>
+      <p>Descripción breve de tu otro proyecto. Puedes editar este texto libremente.</p>
+      <a href="https://elpelusa47.github.io/otrapagina/" target="_blank">Ver proyecto</a>
+    </div>
+
+    <div class="card">
+      <h2>Más próximamente...</h2>
+      <p>Estoy desarrollando nuevas ideas. ¡Vuelve pronto para ver más!</p>
+      <a href="#" onclick="alert('Próximamente ✨')">Ver proyecto</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 ElPelusa47 — Diseñado con ❤️ y café ☕
+  </footer>
+
 </body>
 </html>
